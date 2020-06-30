@@ -1,6 +1,6 @@
 package by.введениеВ_ООП.коллекции;
 
-import by.введениеВ_ООП.коллекции.Array.DynaArray;
+import by.введениеВ_ООП.коллекции.array.DynaArray;
 
 public class AnonimClass {
     public static void main(String[] args) {

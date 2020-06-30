@@ -17,12 +17,23 @@ public abstract class DataStructure<T> {
     protected abstract int getCurrentIndex();
 
     public T get() {
-        return dataSet.remove(getCurrentIndex());
+        if (isEmpty()) {
+            throw createEmptyExceptionInstance();
+        } else {
+            return dataSet.remove(getCurrentIndex());
+        }
     }
 
     public T peek() {
-        return dataSet.get(getCurrentIndex());
+        if (isEmpty()) {
+            throw createEmptyExceptionInstance();
+        } else {
+            return dataSet.get(getCurrentIndex());
+        }
     }
+
+    protected abstract RuntimeException createEmptyExceptionInstance();
+
 
     public int size() {
         return dataSet.size();

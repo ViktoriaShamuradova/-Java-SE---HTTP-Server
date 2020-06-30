@@ -1,7 +1,9 @@
 package by.введениеВ_ООП.коллекции;
 
-import by.введениеВ_ООП.коллекции.Array.DynaArray;
+import by.введениеВ_ООП.коллекции.array.DynaArray;
 import by.введениеВ_ООП.коллекции.linkedList.LinkedList;
+import by.введениеВ_ООП.коллекции.queue.Queue;
+import by.введениеВ_ООП.коллекции.stack.Stack;
 
 import java.util.Arrays;
 

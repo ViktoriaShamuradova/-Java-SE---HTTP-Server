@@ -19,6 +19,7 @@ public class LinkedList<E> extends DataSet<E> {
         }
         size++;
     }
+
     public void addLinkedList(LinkedList<E> list) {
         this.size += list.size();
         if (this.first == null) {
@@ -48,11 +49,14 @@ public class LinkedList<E> extends DataSet<E> {
                 current = current.getNext();
             }
         }
-        return null;
+        throw new IndexOutOfBoundsException("Index should be between 0 and " + (size() - 1) + ". Index to get: " + index);
     }
 
     @Override
     public E remove(int index) {
+        if (index < 0 || index > size) {
+            throw new IndexOutOfBoundsException("Index should be between 0 and " + (size() - 1) + ". Index to remove: " + index);
+        }
         Item<E> current = findItem(index);
         return current != null ? removeCurrent(current) : null;
     }
@@ -94,7 +98,7 @@ public class LinkedList<E> extends DataSet<E> {
     }
 
     @Override
-    public  E[] toArray() {
+    public E[] toArray() {
         E[] array;
         array = (E[]) new Object[size];
         int i = 0;
